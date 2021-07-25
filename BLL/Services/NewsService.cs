@@ -29,7 +29,7 @@ namespace BLL.Services
             foreach (var x in AllNews)
                 text += x.Body;
 
-            text=Regex.Replace(text, @"[^0-9a-zA-Zа-яёА-ЯЁ]+", " ");
+            text=Regex.Replace(text, @"[^0-9а-яёА-ЯЁ]+", " ");
             List<TopWords> topWords =text.Split(' ')
             .Where(s => !string.IsNullOrEmpty(s))
             .GroupBy(s => s)
