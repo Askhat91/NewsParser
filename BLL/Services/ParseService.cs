@@ -48,7 +48,7 @@ namespace BLL.Services
         private async Task<NewsDTO> GetNewsAsync(string url)
         {
             HtmlDocument doc = await LoadDocAsync(url);
-
+            var a = 3;
             NewsDTO model = new()
             {
                 Link = url,
